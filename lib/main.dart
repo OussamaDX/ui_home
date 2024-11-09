@@ -1,36 +1,21 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_application_1/pages/home_page.dart';
-import 'package:flutter_application_1/pages/login_page.dart';
-import 'package:flutter_application_1/pages/main_page.dart';
-import 'styles/app_colors.dart';
-void main()
-{
-  runApp(my_App());
+import 'package:flutter_application_1_beginner/pages/home.dart';
+
+void main() {
+  runApp(const MyApp());
 }
 
-class my_App extends StatelessWidget
+class MyApp extends StatelessWidget 
 {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) 
   {
-    return MaterialApp(
-      theme: ThemeData(
-        fontFamily: 'Urbanist',
-        scaffoldBackgroundColor: AppColors.background,
-      ),
-    initialRoute: '/',
-    routes: 
-    {
-     '/': (context) => LoginPage(),
-     '/home': (context) => HomePage(),
-     '/main': (context) => MainPage(),
-    },
-  );
+    return  MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: 'Poppins'),
+      home:  Home_(),
+    );
   }
 }
-// add walapeper to this 
-
-//materail vs scaffold
-//color box
